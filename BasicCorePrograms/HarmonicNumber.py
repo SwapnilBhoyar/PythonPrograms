@@ -16,7 +16,8 @@ def nthHarmonic(number) :
         number parameter is nth harmonic value
         
     Return:
-        harmonic return value is nth harmonic value"""
+        harmonic return value is nth harmonic value
+    """
  
     harmonic = 1.00
 
