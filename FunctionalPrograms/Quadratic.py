@@ -2,7 +2,7 @@
 @Author: Swapnil Bhoyar
 @Date: 2021-06-28 21:05:00
 @Last Modified By: Swapnil Bhoyar
-@Last Modified Date: 2021-06-28 21:05:00
+@Last Modified Date: 2021-06-29 00:55:00
 @Title: Find roots of equation 
 """
 import math
@@ -38,8 +38,8 @@ try:
     a = int(input("Enter a non zero value:"))
     b = int(input("Enter a value:"))
     c = int(input("Enter a value:"))
-except:
-    print("Enter proper value") 
+except Exception as e:
+    print("Enter proper value", e) 
 
 # If a is 0, then incorrect equation
 if a == 0: 
