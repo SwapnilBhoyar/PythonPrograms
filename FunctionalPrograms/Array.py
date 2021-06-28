@@ -16,7 +16,7 @@ def getArray(numberOfRows, numberOfColumns):
     Return:
         this function returns a multi list
     """
-    arrayList = [[0 for col in range(numberOfRows)] for row in range(numberOfColumns)]
+    arrayList = [[0 for col in range(numberOfColumns)] for row in range(numberOfColumns)]
 
     try:
         for row in range(numberOfRows):
