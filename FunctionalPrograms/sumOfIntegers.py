@@ -2,7 +2,7 @@
 @Author: Swapnil Bhoyar
 @Date: 2021-06-28 19:00:00
 @Last Modified By: Swapnil Bhoyar
-@Last Modified Date: 2021-06-28 19:00:00
+@Last Modified Date: 2021-06-29 00:50:00
 @Title: Read in N integers and counts the
 number of triples that sum to exactly 0.
 """
@@ -29,7 +29,12 @@ def findTriplets(elementList, numberOfElements):
         print("no triplet with sum zero exist")
  
 elementList = []
-numberOfElements = int(input("Enter size:"))
+
+try:
+    numberOfElements = int(input("Enter size:"))
+except Exception as e:
+    print("Enter proper value", e)
+
 for element in range(numberOfElements):
     elementList.append(int(input("Enter the elements:")))
 
