@@ -22,7 +22,6 @@ def print_board(a):
     print("────┼────┼────")
     print("",a[7]," │",a[8]," │ ",a[9]," ")
     
-# 
 def print_instructions(players):
     """
         Description:
@@ -35,7 +34,7 @@ def print_instructions(players):
     print()
     
     players[0] = "Computer"
-    players[1] = input("Player 2 : ")
+    players[1] = input("Player 2 name: ")
     
     print("\n-------- Instructions ---------")
     print("->",players[0],"you will using 0")
@@ -62,9 +61,6 @@ def getPosition(pos):
         randomValue = getPosition(pos)
     return randomValue
         
-    
-
-# for start the game
 def startgame(pos):
     """
         Description:
@@ -85,12 +81,11 @@ def startgame(pos):
                 turn = 1
                 continue
             else:
-                print("\n\nHurray !!,",players[0],"you win ♥♥")
+                print("\n\nCongratulations !!,",players[0]," win")
                 break
         else:
             print("\nthis is ur turn",players[1])
             p = int(input("Please Enter postion : "))
-            #p -= 1
             v = 'X'
             pos[p] = v
             print_board(pos)
@@ -99,7 +94,7 @@ def startgame(pos):
                 turn = 0
                 continue
             else:
-                print("\n\nHurray !!,",players[1],"you win ♥♥")    
+                print("\n\nCongratulations !!,",players[1]," win")    
                 break
     else:
         print("\n\nGame is Tie")
@@ -124,7 +119,6 @@ def checkwin(v):
         winner = "nobody"
     return winner
 
-# main code 
 pos = ['',' ',' ',' ',' ',' ',' ',' ',' ',' ']
 players = ['','']
 winning_conditions = [(1,2,3),(4,5,6),(7,8,9),(1,4,7),(2,5,8),(3,6,9),(1,5,9),(3,5,7)]
