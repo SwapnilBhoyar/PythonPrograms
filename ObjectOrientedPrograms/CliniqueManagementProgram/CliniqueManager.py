@@ -1,5 +1,5 @@
-from RegexPattern import RegexPattern
-from CliniqueLogger import CliniqueLogegr
+from ObjectOrientedPrograms.CliniqueManagementProgram.RegexPattern import RegexPattern
+from ObjectOrientedPrograms.CliniqueManagementProgram.CliniqueLogger import CliniqueLogegr
 import json
 import re
 
@@ -70,9 +70,9 @@ class CliniqueManager:
             "age": age
         }
 
-        self.writeJsonDoctor(patientRecord)
+        self.writeJsonPatient(patientRecord)
 
-    def writeJsonDoctor(self, newPatientData):
+    def writeJsonPatient(self, newPatientData):
         with open('patient.json','r') as file:
             fileRead = file.read()
             fileData = json.loads(fileRead)
