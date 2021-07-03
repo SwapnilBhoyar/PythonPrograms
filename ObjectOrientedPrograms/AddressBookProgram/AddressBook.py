@@ -9,14 +9,15 @@ import logging
 import json
 from json import JSONEncoder
 
-logger = logging.Logger(__name__)
-formatter = logging.Formatter('%(levelname)s:%(name)s:%(message)s')
+class LoggerInfo:
+    logger = logging.Logger(__name__)
+    formatter = logging.Formatter('%(levelname)s:%(name)s:%(message)s')
 
-file_handler = logging.FileHandler('AddressBook.log')
-logger.addHandler(file_handler)
+    file_handler = logging.FileHandler('AddressBook.log')
+    logger.addHandler(file_handler)
 
-logging.basicConfig(filename='addressBookErrors.log',  format='%(asctime)s %(levelname)s %(name)s %(message)s')
-loggerError = logging.getLogger(__name__)
+    logging.basicConfig(filename='addressBookErrors.log',  format='%(asctime)s %(levelname)s %(name)s %(message)s')
+    loggerError = logging.getLogger(__name__)
 
 class Contacts:
     def __init__(self, contactData):
@@ -29,7 +30,7 @@ class Contacts:
         self.phoneNumber = contactData["phoneNumber"]
         self.email = contactData["email"]
 
-        logger.info('Created Contact: {} - {} - {} - {} - {} - {} - {} - {}'.format(self.firstName, self.lastName, self.address, self.city, self.state, self.zip, self.phoneNumber,self.email))
+        LoggerInfo.logger.info('Created Contact: {} - {} - {} - {} - {} - {} - {} - {}'.format(self.firstName, self.lastName, self.address, self.city, self.state, self.zip, self.phoneNumber,self.email))
 
         def __str__(self):
             return "first name = " + self.firstName + \
@@ -85,32 +86,17 @@ class AddressBook:
 
             # Serializing json 
             json_string = ContactEncoder().encode(contact)
-    
+
             with open("contactFile.json", "w") as outfile:
                 outfile.write(json_string)
-
+                
         except Exception as e:
-            loggerError.error(e)
+            LoggerInfo.loggerError.error(e)
 
-    def editContact(self, contact):
-        """
-        Desciption:
-            this function edit contact
-        Parameter:
-            contact: object
-        """
-        try:
-            contact.lastName = input("updated last name:")
-            contact.address = input("updated address:")
-            contact.city = input("updated city:")
-            contact.state = input("updated state:")
-            contact.zip = input("updated zip:")
-            contact.phoneNumber = input("updated phone number:")
-            contact.email = input("updated email:")
-        except Exception as e:
-            loggerError.error(e)
+        finally:
+            outfile.close()
 
-    def updateContact(self, contactList):
+    def updateContact(self,addressBookName, contactList):
         """
         Desciption:
             this function update contact
@@ -120,7 +106,40 @@ class AddressBook:
         first_name = input("Enter first name to edit:")
         for contact in contactList:
             if contact.firstName == first_name:
-                self.editContact(contact)
+                
+                with open('contactFile.json') as data_file:
+                    data = json.load(data_file)
+
+                # Iterate through the objects in the JSON                                                                            
+                
+                for element in data:
+                    if 'fiestName' in element == first_name:
+                        del element
+
+                with open('contactFile.json', 'w') as data_file:
+                    data = json.dump(data, data_file)
+
+                contactData = {
+                "firstName": input("First name:"),
+                "lastName": input("last name:"),
+                "address": input("address:"),
+                "city":input("city:"),
+                "state": input("state:"),
+                "zip": input("zip:"),
+                "phoneNumber": input("phoneNumber:"),
+                "email": input("email:")
+            }
+
+            contact = Contacts(contactData)
+            contactList.append(contact)
+            self.addressBookData = {addressBookName: contactList}
+
+            # Serializing json 
+            json_string = ContactEncoder().encode(contact)
+
+            with open("contactFile.json", "w") as outfile:
+                outfile.write(json_string)
+                
         else:
             print("contact does not exist")
 
@@ -152,7 +171,7 @@ class AddressBook:
                 with open('contactFile.json', 'w') as data_file:
                     data = json.dump(data, data_file)
         except Exception as e:
-            loggerError.error(e)
+            LoggerInfo.loggerError.error(e)
 
     def contactDataOperations(self, addressBookName, contactList):
         """
@@ -185,7 +204,7 @@ class AddressBook:
                 elif userChoice == 5:
                     status = False
         except Exception as e:
-            loggerError.error(e)
+            LoggerInfo.loggerError.error(e)
 
     def getNewAddressBook(self):
         """
@@ -198,7 +217,7 @@ class AddressBook:
             self.addContact(addressBookName, contactList)
             self.contactDataOperations(addressBookName, self.addressBookData[addressBookName])
         except Exception as e:
-            loggerError.error(e)
+            LoggerInfo.loggerError.error(e)
 
     def createAddressBook(self):
         """
@@ -221,7 +240,7 @@ class AddressBook:
                 else:
                     status = False
         except Exception as e:
-            loggerError.error(e)
+            LoggerInfo.loggerError.error(e)
 
 addressBookObj = AddressBook()
 addressBookObj.createAddressBook()

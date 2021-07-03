@@ -1,0 +1,10 @@
+{
+  "doctorDetails": [
+    {
+      "doctorId": "1234",
+      "name": "Nitin Wankhede",
+      "availability": "AM",
+      "specialization": "Cardiologists"
+    }
+  ]
+}

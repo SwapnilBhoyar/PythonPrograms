@@ -1,0 +1,25 @@
+{
+    "Himanhsu": [
+      {
+        "patientName": "Neha",
+        "Id": 2569,
+        "patientAge": 26,
+        "mobileNumber": "7894561230"
+      },
+      {
+        "patientName": "Nikita",
+        "Id": "2583",
+        "patientAge": "26",
+        "mobileNumber": "856471230"
+      }
+    ],
+  
+    "Nitin": [
+      {
+        "patientName": "Rohit",
+        "Id": "4587",
+        "patientAge": "22",
+        "mobileNumber": "9876542310"
+      }
+    ]
+  }
