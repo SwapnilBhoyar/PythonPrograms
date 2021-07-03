@@ -75,7 +75,7 @@ def playGame(Stake, Goal, numberOfTimes):
 
     print("Number of games won:", GAME_WON)
 
-    winPercentage = GAME_WON / GAME_LOST * 100
+    winPercentage = GAME_WON / GAME_COUNT * 100
     lossPercentage = 100 - winPercentage
 
     print("Winning percentage is:", winPercentage)
