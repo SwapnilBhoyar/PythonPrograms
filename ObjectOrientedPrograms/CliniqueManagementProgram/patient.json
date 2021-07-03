@@ -1,0 +1,16 @@
+{
+  "patientDetails": [
+    {
+      "patientId": "7894",
+      "patientName": "Swapnil Bhoyar",
+      "mobileNumber": "7895641230",
+      "age": "24"
+    },
+    {
+      "patientId": "2584",
+      "patientName": "Anish Rane",
+      "mobileNumber": "5987412023",
+      "age": "25"
+    }
+  ]
+}
