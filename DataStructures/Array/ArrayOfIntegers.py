@@ -1,14 +1,14 @@
 """
 @Author: Swapnil Bhoyar
 @Date: 2021-07-04 00:20:00
-@Last Modified by: Rikesh Chhetri
+@Last Modified by: Swapnil Bhoyar
 @Last Modified time: 2021-07-03 00:20:00
 @Title : this program dispaly the elements of array.
 """
 from array import *
 import logging
 
-class ArrayOfIntegersLog:
+class ArrayOfIntegersLogInfo:
     logging.basicConfig(filename="ArrayOfIntegersLog.log",
                     format='%(asctime)s %(message)s',
                     filemode='w')
@@ -40,4 +40,4 @@ if __name__ == "__main__":
     try:
         arrayOfIntegers.getArray()
     except Exception as e:
-        ArrayOfIntegersLog.logger.error(e)
+        ArrayOfIntegersLogInfo.logger.error(e)
