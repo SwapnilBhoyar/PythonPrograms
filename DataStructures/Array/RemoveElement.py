@@ -1,14 +1,14 @@
 """
 @Author: Swapnil Bhoyar
 @Date: 2021-07-04 2:13:00
-@Last Modified by: Rikesh Chhetri
+@Last Modified by: Swapnil Bhoyar
 @Last Modified time: 2021-07-04 11:29:00
 @Title : this program remove the elements of array.
 """
 from array import *
 import logging
 
-class RemoveElementLog:
+class RemoveElementLogInfo:
     logging.basicConfig(filename="RemoveElementLog.log",
                     format='%(asctime)s %(message)s',
                     filemode='w')
@@ -35,4 +35,4 @@ if __name__=="__main__":
     try:
         removeElement.remove()
     except Exception as e:
-        RemoveElementLog.logger.error(e)
+        RemoveElementLogInfo.logger.error(e)
