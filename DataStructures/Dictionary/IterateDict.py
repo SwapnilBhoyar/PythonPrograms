@@ -1,7 +1,7 @@
 """
 @Author: Swapnil Bhoyar
 @Date: 2021-07-04 16:18:00
-@Last Modified by: Rikesh Chhetri
+@Last Modified by: Swapnil Bhoyar
 @Last Modified time: 2021-07-04 16:18:00
 @Title : this program iterate dictionary.
 """

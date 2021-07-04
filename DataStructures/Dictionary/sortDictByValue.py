@@ -1,7 +1,7 @@
 """
 @Author: Swapnil Bhoyar
 @Date: 2021-07-04 2:13:00
-@Last Modified by: Rikesh Chhetri
+@Last Modified by: Swapnil Bhoyar
 @Last Modified time: 2021-07-04 11:29:00
 @Title : this program remove the elements of array.
 """
