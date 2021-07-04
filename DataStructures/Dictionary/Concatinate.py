@@ -18,6 +18,10 @@ class ConcatinateLog:
     #Setting the threshold of logger to ERROR
     logger.setLevel(logging.ERROR)
 class Concatinate:
+    """
+    Description:
+        this function concatinate dictionary
+    """
     def getConcatinate(self):
         firstDict={1:10, 2:20}
         secondDict={3:30, 4:40}
