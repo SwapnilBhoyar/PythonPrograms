@@ -1,7 +1,7 @@
 """
 @Author: Swapnil Bhoyar
 @Date: 2021-07-04 17:54:00
-@Last Modified by: Rikesh Chhetri
+@Last Modified by: Swapnil Bhoyar
 @Last Modified time: 2021-07-04 17:54:00
 @Title : Write a Python program to remove a key from a dictionary.
 """
