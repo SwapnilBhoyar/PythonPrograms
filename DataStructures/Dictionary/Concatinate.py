@@ -1,7 +1,7 @@
 """
 @Author: Swapnil Bhoyar
 @Date: 2021-07-04 15:19:00
-@Last Modified by: Rikesh Chhetri
+@Last Modified by: Swapnil Bhoyar
 @Last Modified time: 2021-07-04 15:19:00
 @Title : this program concatinate dictionary.
 """
@@ -17,6 +17,7 @@ class ConcatinateLog:
     
     #Setting the threshold of logger to ERROR
     logger.setLevel(logging.ERROR)
+    
 class Concatinate:
     """
     Description:
