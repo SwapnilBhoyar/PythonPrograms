@@ -1,14 +1,14 @@
 """
 @Author: Swapnil Bhoyar
 @Date: 2021-07-04 12:20:00
-@Last Modified by: Rikesh Chhetri
+@Last Modified by: Swapnil Bhoyar
 @Last Modified time: 2021-07-03 12:20:00
 @Title : this program reverse the elements of array.
 """
 from array import *
 import logging
 
-class ReverseOrderLog:
+class ReverseOrderLogInfo:
     logging.basicConfig(filename="ReverseOrderLog.log",
                     format='%(asctime)s %(message)s',
                     filemode='w')
@@ -36,4 +36,4 @@ if __name__ == "__main__":
     try:
         reverseOrder.getReverse()
     except Exception as e:
-        ReverseOrderLog.logger.error(e)
+        ReverseOrderLogInfo.logger.error(e)
