@@ -1,13 +1,12 @@
 """
 @Author: Swapnil Bhoyar
 @Date: 2021-07-04 15:00:00
-@Last Modified by: Rikesh Chhetri
+@Last Modified by: Swapnil Bhoyar
 @Last Modified time: 2021-07-04 15:00:00
 @Title : this program add key to dictionary.
 """
 from array import *
 import logging
-import operator
 
 class AddKeyLog:
     logging.basicConfig(filename="AddKeyLog.log",
