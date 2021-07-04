@@ -21,6 +21,10 @@ class StringDictionaryLog:
 
 class StringDictionary:
     def getStringDictionary(self):
+        """
+        Description:
+            this function create dictionary from string
+        """
         inputString = 'swapnil' 
         stringDict = {}
         for letter in inputString:
