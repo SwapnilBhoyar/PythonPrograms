@@ -6,18 +6,7 @@
 @Title : this program dispaly the elements of array.
 """
 from array import *
-import logging
-
-class ArrayOfIntegersLogInfo:
-    logging.basicConfig(filename="ArrayOfIntegersLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
+from Log import Log
 
 class ArrayOfIntegers:
     def getArray(self):
@@ -28,11 +17,11 @@ class ArrayOfIntegers:
     
         integerArray = array('i', [10,20,30,40,50])
 
-        print(integerArray[0])
-        print(integerArray[1])
-        print(integerArray[2])
-        print(integerArray[3])
-        print(integerArray[4])
+        Log.logger.info(integerArray[0])
+        Log.logger.info(integerArray[1])
+        Log.logger.info(integerArray[2])
+        Log.logger.info(integerArray[3])
+        Log.logger.info(integerArray[4])
 
 if __name__ == "__main__":
 
@@ -40,4 +29,4 @@ if __name__ == "__main__":
     try:
         arrayOfIntegers.getArray()
     except Exception as e:
-        ArrayOfIntegersLogInfo.logger.error(e)
+        Log.logger.error(e)
