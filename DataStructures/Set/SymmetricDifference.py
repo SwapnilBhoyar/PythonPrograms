@@ -5,18 +5,7 @@
 @Last Modified time: 2021-07-04 02:24:00
 @Title : Write a Python program to create a symmetric difference..
 """
-import logging
-
-class SymmetricDifferenceLog:
-    logging.basicConfig(filename="SymmetricDifferenceLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
+from Log import Log
 
 class SymmetricDifference:
     def getSymmetric(self):
@@ -59,4 +48,4 @@ if __name__=="__main__":
     try:
         symmetricDifference.getSymmetric()
     except Exception as e:
-        SymmetricDifferenceLog.logger.error(e)
+        Log.logger.error(e)

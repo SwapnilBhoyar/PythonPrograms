@@ -5,18 +5,7 @@
 @Last Modified time: 2021-07-04 23:39:00
 @Title : Write a Python program to create a set.
 """
-import logging
-
-class CreateSetLog:
-    logging.basicConfig(filename="CreateSetLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
+from Log import Log
 
 class CreateSet:
     def getSet(self):
@@ -35,4 +24,4 @@ if __name__=="__main__":
     try:
         createSet.getSet()
     except Exception as e:
-            CreateSetLog.logger.error(e)
+            Log.logger.error(e)

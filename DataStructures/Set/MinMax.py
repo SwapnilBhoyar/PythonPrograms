@@ -5,18 +5,7 @@
 @Last Modified time: 2021-07-05 10:19:00
 @Title : Write a Python program to find maximum and the minimum value in a set.
 """
-import logging
-
-class MinMaxLog:
-    logging.basicConfig(filename="MinMaxLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
+from Log import Log
 
 class MinMax:
     def getMinMax(self):
@@ -42,4 +31,4 @@ if __name__=="__main__":
     try:
         minMax.getMinMax()
     except Exception as e:
-        MinMaxLog.logger.error(e)
+        Log.logger.error(e)

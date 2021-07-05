@@ -5,18 +5,7 @@
 @Last Modified time: 2021-07-04 00:52:00
 @Title : Write a Python program to remove item(s) from a given set.
 """
-import logging
-
-class RemoveElementLog:
-    logging.basicConfig(filename="RemoveElementLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
+from Log import Log
 
 class RemoveElement:
     def getRemoveElement(self):
@@ -35,4 +24,4 @@ removeElement = RemoveElement()
 try:
     removeElement.getRemoveElement()
 except Exception as e:
-    RemoveElementLog.logger.error(e)
+    Log.logger.error(e)

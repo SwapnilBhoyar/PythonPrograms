@@ -5,19 +5,7 @@
 @Last Modified time: 2021-07-04 00:41:00
 @Title : Write a Python program to add member(s) in a set.
 """
-import logging
-
-class AddSetLog:
-    logging.basicConfig(filename="AddSetLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
-
+from Log import Log
 class AddSet:
     def checkAddSet(self):
         """
@@ -35,9 +23,11 @@ class AddSet:
         colorSet.update(["Blue", "Green"])
         print(colorSet)
 
+        number = set([])
+
 if __name__=="__main__":
     addSet = AddSet()
     try:
         addSet.checkAddSet()
     except Exception as e:
-        AddSetLog.logger.error(e)
+        Log.logger.error(e)

@@ -5,18 +5,7 @@
 @Last Modified time: 2021-07-04 02:11:00
 @Title : Write a Python program to create set difference.
 """
-import logging
-
-class SetDifferenceLog:
-    logging.basicConfig(filename="SetDifferenceLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
+from Log import Log
 
 class SetDifference:
     def getSetDifference(self):
@@ -55,4 +44,4 @@ if __name__=="__main__":
     try:
         setDifference.getSetDifference()
     except Exception as e:
-        SetDifferenceLog.logger.error(e)
+        Log.logger.error(e)

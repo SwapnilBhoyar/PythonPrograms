@@ -5,18 +5,7 @@
 @Last Modified time: 2021-07-04 01:36:00
 @Title : Write a Python program to create an intersection of sets.
 """
-import logging
-
-class IntersectionOfSetsLog:
-    logging.basicConfig(filename="IntersectionOfSetsLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
+from Log import Log
 
 class IntersectionOfSets:
     def getIntersection(self):
@@ -38,4 +27,4 @@ if __name__=="__main__":
     try:
         intersectionOfSets.getIntersection()
     except Exception as e:
-        IntersectionOfSetsLog.logger.error(e)
+        Log.logger.error(e)

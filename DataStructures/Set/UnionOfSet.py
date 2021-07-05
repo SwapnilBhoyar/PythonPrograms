@@ -5,19 +5,7 @@
 @Last Modified time: 2021-07-04 01:55:00
 @Title : Write a Python program to create a union of sets.
 """
-import logging
-
-class UnionOfSetLog:
-    logging.basicConfig(filename="UnionOfSetLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
-
+from Log import Log
 class UnionOfSet:
     """
     Description:
@@ -51,4 +39,4 @@ if __name__=="__main__":
     try:
         unionOfSet.getUnionOfSet()
     except Exception as e:
-        UnionOfSetLog.logger.error(e)
+        Log.logger.error(e)

@@ -5,18 +5,7 @@
 @Last Modified time: 2021-07-04 00:23:00
 @Title : Write a Python program to iteration over sets.
 """
-import logging
-
-class IterateSetLog:
-    logging.basicConfig(filename="IterateSetLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
+from Log import Log
 
 class IterateSet:
     def checkIterateSet(self):
@@ -33,4 +22,4 @@ if __name__=="__main__":
     try:
         iterateSet.checkIterateSet()
     except Exception as e:
-        IterateSetLog.logger.error(e)
+        Log.logger.error(e)

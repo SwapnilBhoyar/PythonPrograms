@@ -5,18 +5,7 @@
 @Last Modified time: 2021-07-04 01:27:00
 @Title : Write a Python program to remove an item from a set if it is present in the set.
 """
-import logging
-
-class RemoveIfPresentLog:
-    logging.basicConfig(filename="RemoveIfPresentLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
+from Log import Log
 
 class RemoveIfPresent:
     def getRemoveIfPresent(self):
@@ -42,4 +31,4 @@ if __name__=="__main__":
     try:
         removeIfPresent.getRemoveIfPresent()
     except Exception as e:
-        RemoveIfPresentLog.logger.error(e)
+        Log.logger.error(e)

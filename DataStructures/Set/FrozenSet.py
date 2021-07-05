@@ -5,18 +5,7 @@
 @Last Modified time: 2021-07-05 10:10:00
 @Title : Write a Python program to use of frozensets.
 """
-import logging
-
-class FrozenSetLog:
-    logging.basicConfig(filename="FrozenSetLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
+from Log import Log
 
 class FrozenSet:
     """
@@ -42,4 +31,4 @@ if __name__=="__main__":
     try:
         frozenSet.getFrozenSet()
     except Exception as e:
-        FrozenSetLog.logger.error(e)    
+        Log.logger.error(e)    

@@ -5,19 +5,7 @@
 @Last Modified time: 2021-07-05 02:29:00
 @Title : Write a Python program to clear a set.
 """
-import logging
-
-class ClearSetLog:
-    logging.basicConfig(filename="ClearSetLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
-
+from Log import Log
 class ClearSet:
     def getClearSet(self):
         """
@@ -37,4 +25,4 @@ if __name__=="__main__":
     try:
         clearSet.getClearSet()
     except Exception as e:
-        ClearSetLog.logger.error(e)
+        Log.logger.error(e)
