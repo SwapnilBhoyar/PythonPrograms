@@ -6,18 +6,7 @@
 @Title : Write a Python script to generate and print a dictionary that contains a
 number (between 1 and n) in the form (x, x*x).
 """
-import logging
-
-class SquareDictLog:
-    logging.basicConfig(filename="SquareDictLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
+from Log import Log
 
 class SquareDict:
     def getSquareDict(self):
@@ -34,4 +23,4 @@ squareDict = SquareDict()
 try:
     squareDict.getSquareDict()
 except Exception as e:
-    SquareDictLog.logger.error(e)   
+    Log.logger.error(e)   

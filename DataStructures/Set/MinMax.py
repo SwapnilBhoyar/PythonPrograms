@@ -34,8 +34,12 @@ class MinMax:
         print("\nMinimum value of the said set:")
         print(min(numberSet))
 
-minMax = MinMax()
-try:
-    minMax.getMinMax()
-except Exception as e:
-    MinMaxLog.logger.error(e)
+        number = {3}
+        print(type(number))
+
+if __name__=="__main__":
+    minMax = MinMax()
+    try:
+        minMax.getMinMax()
+    except Exception as e:
+        MinMaxLog.logger.error(e)

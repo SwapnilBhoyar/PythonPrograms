@@ -5,19 +5,7 @@
 @Last Modified time: 2021-07-04 17:54:00
 @Title : Write a Python program to remove a key from a dictionary.
 """
-import logging
-
-class RemoveKeyLog:
-    logging.basicConfig(filename="RemoveKeyLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
-
+from Log import Log
 class RemoveKey:
     """
     Description:
@@ -34,4 +22,4 @@ removeKey = RemoveKey()
 try:
     removeKey.getRemoveKey()
 except Exception as e:
-    RemoveKeyLog.logger.error(e)
+    Log.logger.error(e)

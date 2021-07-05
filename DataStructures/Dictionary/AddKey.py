@@ -5,19 +5,7 @@
 @Last Modified time: 2021-07-04 15:00:00
 @Title : this program add key to dictionary.
 """
-from array import *
-import logging
-
-class AddKeyLog:
-    logging.basicConfig(filename="AddKeyLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
+from Log import Log
 
 class AddKey:
     def add(self):
@@ -32,4 +20,7 @@ class AddKey:
 
 if __name__=="__main__":
     addKey = AddKey()
-    addKey.add()
+    try:
+        addKey.add()
+    except Exception as e:
+        Log.logger.error(e)

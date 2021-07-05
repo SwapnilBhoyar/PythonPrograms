@@ -5,17 +5,7 @@
 @Last Modified time: 2021-07-04 18:12:00
 @Title : Write a Python program to print a dictionary in table format.
 """
-import logging
-class TableDictionaryLog:
-    logging.basicConfig(filename="TableDictionaryLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
+from Log import Log
 
 class TableDictionary:
     """
@@ -32,4 +22,4 @@ if __name__=="__main__":
     try:
         tableDictionary.getTableDictionary()
     except Exception as e:
-        TableDictionaryLog.logger.error(e)
+        Log.logger.error(e)

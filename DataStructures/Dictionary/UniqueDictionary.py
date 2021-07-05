@@ -5,19 +5,7 @@
 @Last Modified time: 2021-07-04 18:12:00
 @Title : Write a Python program to print all unique values in a dictionary..
 """
-import logging
-
-class UniqueDictionaryLog:
-    logging.basicConfig(filename="UniqueDictionaryLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
-
+from Log import Log
 class UniqueDictionary:
     """
     Description:
@@ -34,4 +22,4 @@ if __name__=="__main__":
     try:
         uniqueDictionary.getUniqueDictionary()
     except Exception as e:
-        UniqueDictionaryLog.logger.error(e)
+        Log.logger.error(e)

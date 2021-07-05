@@ -5,17 +5,7 @@
 @Last Modified time: 2021-07-04 19:59:00
 @Title : Write a Python program to convert a list into a nested dictionary of keys.
 """
-import logging
-class ListToDictionaryLog:
-    logging.basicConfig(filename="ListToDictionaryLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
+from Log import Log
 
 class ListToDictionary:
     def getListToDictionary(self):
@@ -34,4 +24,4 @@ if __name__=="__main__":
     try:
         listToDictionary.getListToDictionary()
     except Exception as e:
-        ListToDictionaryLog.logger.error(e)
+        Log.logger.error(e)

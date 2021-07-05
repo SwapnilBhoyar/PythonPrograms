@@ -5,18 +5,7 @@
 @Last Modified time: 2021-07-04 16:18:00
 @Title : this program iterate dictionary.
 """
-import logging
-
-class IterateLog:
-    logging.basicConfig(filename="IterateLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
+from Log import Log
 
 class IterateDict:
     """
@@ -34,5 +23,5 @@ if __name__=="__main__":
     try:
         iterateDict.iterate()
     except Exception as e:
-        IterateLog.logger(e)
+        Log.logger(e)
 

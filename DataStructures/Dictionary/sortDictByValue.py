@@ -5,20 +5,9 @@
 @Last Modified time: 2021-07-04 11:29:00
 @Title : this program remove the elements of array.
 """
-from array import *
-import logging
-import operator
 
-class SortDictByValueLog:
-    logging.basicConfig(filename="SortDictByValueLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
+import operator
+from Log import Log
 
 class SortDictByValue:
     def sortDictionary(self):
@@ -36,4 +25,4 @@ if __name__=="__main__":
     try:
         soryDictByValue.sortDictionary()
     except Exception as e:
-        SortDictByValueLog.logger.error(e)
+        Log.logger.error(e)

@@ -6,18 +6,7 @@ from collections import defaultdict, Counter
 @Last Modified time: 2021-07-04 18:12:00
 @Title : Write a Python program to create a dictionary from a string.
 """
-import logging
-from collections import defaultdict, Counter
-class StringDictionaryLog:
-    logging.basicConfig(filename="StringDictionaryLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
+from Log import Log
 
 class StringDictionary:
     def getStringDictionary(self):
@@ -36,4 +25,4 @@ if __name__=="__main__":
     try:
         StringDictionary.getStringDictionary()
     except Exception as e:
-        StringDictionaryLog.logger.error(e)
+        Log.logger.error(e)

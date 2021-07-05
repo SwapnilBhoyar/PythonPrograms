@@ -5,18 +5,7 @@
 @Last Modified time: 2021-07-04 15:19:00
 @Title : this program concatinate dictionary.
 """
-import logging
-
-class ConcatinateLog:
-    logging.basicConfig(filename="ConcatinateLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
+from Log import Log
     
 class Concatinate:
     """
@@ -36,4 +25,4 @@ if __name__=="__main__":
     try:
         Concatinate.getConcatinate()
     except Exception as e:
-        ConcatinateLog.logger.error(e)
+        Log.logger.error(e)

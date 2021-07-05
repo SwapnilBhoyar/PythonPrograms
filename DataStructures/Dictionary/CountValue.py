@@ -6,17 +6,7 @@
 @Title : Write a Python program to count the values associated with key in a
 dictionary.
 """
-import logging
-class CountValueLog:
-    logging.basicConfig(filename="CountValueLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
+from Log import Log
 
 class CountValue:
     def getCountValue(self):
@@ -36,4 +26,4 @@ if __name__=="__main__":
     try:
         countValue.getCountValue()
     except Exception as e:
-        CountValueLog.logger.error(e)
+        Log.logger.error(e)
