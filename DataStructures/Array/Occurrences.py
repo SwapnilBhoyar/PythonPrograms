@@ -6,18 +6,7 @@
 @Title : this program reverse the elements of array.
 """
 from array import *
-import logging
-
-class OccurencesLogInfo:
-    logging.basicConfig(filename="OccurencesLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
+from Log import Log
 
 class Occurences:
     """
@@ -40,4 +29,4 @@ if __name__ == "__main__":
     try:
         occurences.getCount()
     except Exception as e:
-        OccurencesLogInfo.logger.error(e)
+        Log.logger.error(e)

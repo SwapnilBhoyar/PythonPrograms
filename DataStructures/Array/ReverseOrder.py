@@ -6,18 +6,8 @@
 @Title : this program reverse the elements of array.
 """
 from array import *
-import logging
 
-class ReverseOrderLogInfo:
-    logging.basicConfig(filename="ReverseOrderLog.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-  
-    #Creating an object
-    logger=logging.getLogger()
-    
-    #Setting the threshold of logger to ERROR
-    logger.setLevel(logging.ERROR)
+from Log import Log
     
 class ReverseOrder:
     def getReverse(self):
@@ -36,4 +26,4 @@ if __name__ == "__main__":
     try:
         reverseOrder.getReverse()
     except Exception as e:
-        ReverseOrderLogInfo.logger.error(e)
+        Log.logger.error(e)
