@@ -19,6 +19,9 @@ def repeatedElement():
     for number in tupple:
         if tupple.count(number) > 1:
             numberSet.add(number)
+        check = 4 in tupple #return true or false
     Log.logger.info(numberSet)
+    Log.logger.info(check)
+
 
 repeatedElement()
